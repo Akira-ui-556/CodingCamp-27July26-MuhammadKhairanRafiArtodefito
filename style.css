@@ -1,0 +1,400 @@
+body{
+    background: #021A54;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+body > .card:first-child {
+    grid-column: 1 / -1;
+}
+
+.row-cards{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+body > .card:last-of-type {
+    grid-column: 1 / -1;
+}
+
+.card{
+    background: #FF85BB;
+    padding: 24px;
+    margin: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #F5F5F5;
+}
+
+/* card greeting */
+.time{
+    text-align: center;
+}
+
+.date{
+    text-align: center;
+}
+
+.greeting{
+    text-align: center;
+}
+
+.name-input{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.name-input input{
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    width: 180px;
+}
+
+.name-input button{
+    padding: 6px 14px;
+    background: #021A54;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.name-input button:hover{
+    opacity: 0.85;
+}
+
+/* card timer */
+#timer{
+    margin: 12px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #021A54;
+    text-align: center;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.buttons button{
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+#startBtn{
+    background: #57C785;
+}
+
+#pauseBtn{
+    background: #fa003f;
+}
+
+#resetBtn{
+    background: #6c757d;
+}
+
+.buttons button:hover{
+    opacity: 0.85;
+}
+
+/* card todo list */
+.todo-input{
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.todo-input input{
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.todo-input button{
+    padding: 8px 16px;
+    background: #021A54;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.todo-input button:hover{
+    opacity: 0.85;
+}
+
+.task-filter{
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.filter-btn{
+    flex: 1;
+    padding: 6px 0;
+    background: rgba(255,255,255,0.35);
+    color: #021A54;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.15s;
+}
+
+.filter-btn:hover{
+    background: rgba(255,255,255,0.55);
+}
+
+.filter-btn.active{
+    background: #021A54;
+    color: #fff;
+}
+
+#taskList{
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.35);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.task-item input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #021A54;
+}
+
+.task-label{
+    flex: 1;
+    font-size: 14px;
+    color: #021A54;
+    word-break: break-word;
+}
+
+.task-done .task-label{
+    text-decoration: line-through;
+    opacity: 0.55;
+}
+
+.task-delete{
+    background: #fa003f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.task-delete:hover{
+    opacity: 0.85;
+}
+
+.task-empty{
+    text-align: center;
+    color: #021A54;
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.task-alert{
+    display: none;
+    color: #fa003f;
+    background: rgba(250, 0, 63, 0.12);
+    border: 1px solid #fa003f;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* card link */
+.link-form{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.link-form input{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.link-form button{
+    padding: 8px 16px;
+    background: #021A54;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.link-form button:hover{
+    opacity: 0.85;
+}
+
+.link-alert{
+    display: none;
+    color: #fa003f;
+    background: rgba(250, 0, 63, 0.12);
+    border: 1px solid #fa003f;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+#linkList{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link-empty{
+    text-align: center;
+    color: #021A54;
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.link-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.35);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.link-visit{
+    flex: 1;
+    background: #021A54;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.link-visit:hover{
+    opacity: 0.85;
+}
+
+.link-delete{
+    background: #fa003f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.link-delete:hover{
+    opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .link-form{
+        flex-wrap: wrap;
+    }
+    .link-form input{
+        flex: 1 1 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    body{
+        grid-template-columns: 1fr;
+    }
+
+    body > .card:first-child,
+    body > .card:last-of-type{
+        grid-column: 1;
+    }
+
+    .row-cards{
+        grid-column: 1;
+        grid-template-columns: 1fr;
+    }
+
+    .name-input{
+        flex-wrap: wrap;
+    }
+
+    .name-input input{
+        width: 100%;
+        flex: 1;
+    }
+
+    .link-form{
+        flex-wrap: wrap;
+    }
+
+    .link-form input{
+        flex: 1 1 100px;
+        min-width: 80px;
+    }
+
+    .link-form button{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

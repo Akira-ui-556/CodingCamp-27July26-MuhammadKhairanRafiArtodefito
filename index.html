@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>To-Do List Life Dashboard</title>
+</head>
+<body>
+
+    <!-- card greeting -->
+    <div class="card">
+        <h1 id="current-time" class="time">00:00:00</h1>
+        <p id="full-date" class="date"></p>
+        <h2 id="greeting" class="greeting"></h2>
+        <div class="name-input">
+            <input type="text" id="nameInput" placeholder="Enter your name..." maxlength="30" />
+            <button id="nameBtn">Set</button>
+        </div>
+    </div>
+
+    <!-- card timer + to-do list -->
+    <div class="row-cards">
+
+      <!-- card timer -->
+      <div class="card">
+        <div class="title">Focus Timer</div>
+        <div id="timer">25:00</div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+      </div>
+
+      <!-- card to-do list -->
+      <div class="card">
+        <div class="title">Task</div>
+        <div class="todo-input">
+            <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100" />
+            <button id="addTaskBtn">Add</button>
+        </div>
+        <p id="taskAlert" class="task-alert"></p>
+        <div class="task-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Not Done</button>
+            <button class="filter-btn" data-filter="done">Done</button>
+        </div>
+        <ul id="taskList"></ul>
+      </div>
+
+    </div>
+
+      <!-- card link -->
+       <div class="card">
+        <div class="title">Quick Links</div>
+        <div class="link-form">
+            <input type="text" id="linkName" placeholder="Link name..." maxlength="50" />
+            <input type="text" id="linkUrl" placeholder="https://example.com" />
+            <button id="saveLinkBtn">Save</button>
+        </div>
+        <p id="linkAlert" class="link-alert"></p>
+        <div id="linkList"></div>
+       </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
